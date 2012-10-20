@@ -47,7 +47,7 @@ class TwitterFeed {
      */
     protected function getTwitterMessages($username, $num = 5) {
         include_once(ABSPATH . WPINC . '/rss.php');
-        $aMessage = fetch_rss('http://api.twitter.com/1/statuses/user_timeline'.$username.'.rss');
+        $aMessage = fetch_rss('http://api.twitter.com/1/statuses/user_timeline/'.$username.'.rss');
 
         if(empty($aMessage)) {
             return array();
